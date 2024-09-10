@@ -1,0 +1,31 @@
+Key,Value,Note
+emailName,,email name that the robot will use
+emailPassword,,email password
+hidemeUsername,rpaTest2020,username of hide.me account to signup or login
+hidemePassword,test@123,password of hide.me account
+outputFolder,Data/Output,the output folder thatt contains the process result files
+screenshotsFolder,Exceptions_Screenshots,this folder contains the error screenshots
+receiverEmails,rpa4.maids.cc@gmail.com,receiver's emails that you should send the output files to them
+HideMeURL,https://hide.me,
+EmailServer,imap.gmail.com,
+EmailPort,993,
+EmailTitle,maids.cc RPA test,
+AttachmentFileName,test.xlsx,
+WaitForNewEmails,5,in minutes
+HideMeEmail,noreply@hide.me,
+hidemeDesktopAppPath,C:\Program Files (x86)\hide.me VPN\Hide.me.exe,
+FakeNameGenerartorURL,https://www.fakenamegenerator.com/,
+ResultTemplateFile,Data/Input/result.xlsx,
+SummaryTemplateFile,Data/Input/summary.xlsx,
+TempFolderPath,Data/Temp,
+AutomationExerciseURL,https://automationexercise.com/,
+SMTPEmailServer,smtp.gmail.com,
+SMTPEmailPort,465,
+EmailSubject,Output Reports,
+EmailBody,"Dears,
+
+KFA
+
+Robot.
+",
+receiveEmails,,

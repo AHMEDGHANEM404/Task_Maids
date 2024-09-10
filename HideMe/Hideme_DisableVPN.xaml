@@ -1,0 +1,231 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Hideme_DisableVPN" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="in_dict_VariablesConfig" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1473,1984</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Template_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail.Filters</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Filters</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Mail.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Models</x:String>
+      <x:String>UiPath.Shared.Services.Graph.Mail.Models</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Utilities</x:String>
+      <x:String>UiPath.Shared.Activities.Triggers</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail.Triggers</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Description: Disable the VPN in the Hide me desktop application &#xA;&#xA;Pre-Condition: N/A&#xA;Post-Condition: N/A&#xA;&#xA;Inputs: in_Config, in_dict_VariablesConfig&#xA;Outputs: N/A" DisplayName="Hideme_DisableVPN" sap:VirtualizedContainerService.HintSize="780,1919" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Default="Hideme_DisableVPN" Name="str_SequenceName" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message - Process Started" sap:VirtualizedContainerService.HintSize="718,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[str_SequenceName + in_Config(&quot;LogMessage_LogStart&quot;).ToString]" />
+    <TryCatch DisplayName="Try Catch - Hideme_DisableVPN" sap:VirtualizedContainerService.HintSize="718,1377" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Try>
+        <Sequence DisplayName="Try - DisableVPN" sap:VirtualizedContainerService.HintSize="680,1117" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="DisableVPN" sap:VirtualizedContainerService.HintSize="618,1029" sap2010:WorkflowViewState.IdRef="Sequence_10">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NCheckState DisplayName="Check App State 'Hide me app'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="556,918" sap2010:WorkflowViewState.IdRef="NCheckState_1" Timeout="5" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="512,678" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Application: hide.me VPN" sap:VirtualizedContainerService.HintSize="450,588" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="ca8779ff-bba3-41a7-a84e-c7048c6a5858" Version="V2">
+                    <uix:NApplicationCard.Body>
+                      <ActivityAction x:TypeArguments="x:Object">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,272" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Disable VPN'" sap:VirtualizedContainerService.HintSize="354,182" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ca8779ff-bba3-41a7-a84e-c7048c6a5858" Version="V3">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable CvElementArea="191, 488, 378, 61" CvTextArea="319, 507, 123, 22" CvTextArgument="Disable VPN" CvType="Button" DesignTimeRectangle="195, 491, 375, 57" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;ctrl automationid='btnProtection' name='Disable VPN' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='btnProtection' name='Disable VPN' role='push button' check:text='Disable VPN' /&gt;" Guid="34b6ba09-4570-4dc0-a6b1-e5d97d439873" InformativeScreenshot="3f51340131e1c07fd1fdbf474f8eb9a8.png" ScopeSelectorArgument="&lt;wnd app='hide.me.exe' cls='HwndWrapper*' title='hide.me VPN' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                        </Sequence>
+                      </ActivityAction>
+                    </uix:NApplicationCard.Body>
+                    <uix:NApplicationCard.TargetApp>
+                      <uix:TargetApp Area="481, 1208, 764, 793" FilePath="[in_dict_VariablesConfig(&quot;hidemeDesktopAppPath&quot;).ToString]" IconBase64="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" InformativeScreenshot="3675b4d2ab09459809a983ea6e927ef9.png" Selector="&lt;wnd app='hide.me.exe' cls='HwndWrapper*' title='hide.me VPN' /&gt;" Title="hide.me VPN" />
+                    </uix:NApplicationCard.TargetApp>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NApplicationCard>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="10, 38, 744, 744" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl automationid='form' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='form' role='client' check:fulltext='&amp;#xD;&amp;#xA;Your experience is limited&amp;#xD;&amp;#xA;Go PREMIUM to take advantage of all the features!&amp;#xD;&amp;#xA;Upgrade now&amp;#xD;&amp;#xA;' /&gt;" Guid="d15fe53c-6a2f-4847-8dbb-061653d69f85" InformativeScreenshot="68c80c171d75e811fcd42a5f1f6612ce.png" ScopeSelectorArgument="&lt;wnd app='hide.me.exe' cls='HwndWrapper*' title='hide.me VPN' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+          </Sequence>
+        </Sequence>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="684,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <Rethrow DisplayName="Rethrow SE" sap:VirtualizedContainerService.HintSize="334,25" sap2010:WorkflowViewState.IdRef="Rethrow_1" />
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
+    <ui:LogMessage DisplayName="Log Message - Process Ended" sap:VirtualizedContainerService.HintSize="718,164" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[str_SequenceName + in_Config(&quot;LogMessage_LogEnd&quot;).ToString]" />
+  </Sequence>
+</Activity>
